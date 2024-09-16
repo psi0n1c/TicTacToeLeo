@@ -1,0 +1,73 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gold: #ffc900;
+  --winning-blocks: #4169e1;
+  --tie: #ffd700;
+  --red: #FF0000;
+}
+
+body {
+  color: var(--gold);
+  font-family: 'Audiowide', cursive;
+}
+h1 {
+  font-size: 54px;
+  text-transform: uppercase;
+}
+
+.container-fluid{
+  background-color: #213a57;
+}
+
+/*.container {*/
+/*  !*padding: 40px;*!*/
+/*  !*height: 100vh;*!*/
+/*  !*display: flex;*!*/
+/*  !*justify-content: center;*!*/
+/*  !*align-items: center;*!*/
+/*  !*flex-direction: column;*!*/
+/*    background-color: #213a57;*/
+/*}*/
+
+#gameboard {
+  width: 300px;
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
+  margin-top: 40px;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 90px;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+}
+.box:nth-child(3n) {
+  border-right: none;
+}
+.box:nth-child(6) ~ .box {
+  border-bottom: none;
+}
+button {
+  /*padding: 10px 20px;*/
+  /*border-radius: 10px;*/
+  background-color: var(--gold);
+  color: #333;
+  border-color: var(--gold);
+  /*font-size: 18px;*/
+  /*transition: 200ms transform;*/
+  /*font-weight: 600;*/
+}
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
